@@ -86,3 +86,14 @@ function reset(){
     userSeq=[];
     level=0;
 }
+
+// High score tracking
+let highScore = 0;
+
+function updateHighScore() {
+    if (level > highScore) {
+        highScore = level;
+        const hsEl = document.getElementById("highScore");
+        if (hsEl) hsEl.innerText = "Best: " + highScore;
+    }
+}
