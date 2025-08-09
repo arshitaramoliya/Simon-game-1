@@ -30,3 +30,29 @@ body{
 .userflash{
     background-color: green;
 }
+/* Improved button flash animation */
+.pressed {
+    opacity: 0.4;
+    transform: scale(0.96);
+    transition: opacity 0.1s ease, transform 0.1s ease;
+}
+
+#level-title {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#highScore {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Responsive fix for smaller screens */
+@media (max-width: 480px) {
+    .btn {
+        width: 120px;
+        height: 120px;
+    }
+}
