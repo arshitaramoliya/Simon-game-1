@@ -97,3 +97,10 @@ function updateHighScore() {
         if (hsEl) hsEl.innerText = "Best: " + highScore;
     }
 }
+
+// Keyboard accessibility — allow Enter key to start game
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !gameStarted) {
+        startGame();
+    }
+});
